@@ -6,14 +6,21 @@ import EllosClick from "./components/EllosClick";
 
 import Swal from "sweetalert2";
 
+
 function App() {
   const [puntosNos, setPuntosNos] = useState(0);
   const [puntosNos2, setPuntosNos2] = useState(0);
+  
 
   const [puntosEllos, setPuntosEllos] = useState(0);
   const [puntosEllos2, setPuntosEllos2] = useState(0);
 
   const [gameOver, setGameOver] = useState(false);
+
+  const rutaImagenPuntosNos = `./src/assets/fosforos/fosforos-${puntosNos}.png`;
+  const rutaImagenPuntosNos2 = `./src/assets/fosforos/fosforos-${puntosNos2}.png`;
+  const rutaImagenPuntosEllos = `./src/assets/fosforos/fosforos-${puntosEllos}.png`;
+  const rutaImagenPuntosEllos2 = `./src/assets/fosforos/fosforos-${puntosEllos2}.png`;
 
   useEffect(() => {
     if (puntosEllos2 === 15 || puntosNos2 === 15) {
@@ -97,7 +104,7 @@ function App() {
       cancelButtonText: "No",
       customClass: {
         confirmButton: "px-4 py-2 text-[#4d2e0f]",
-        cancelButton: "px-4 py-2 text-[#4de0f]",
+        cancelButton: "px-4 py-2 text-[#4d2e0f]",
       },
     }).then((result) => {
       if (result.isConfirmed) {
@@ -138,7 +145,7 @@ function App() {
                   {" "}
                   <img
                     className={`${puntosNos <= 5 ? "h-[60%]" : "h-full"}`}
-                    src={`./src/assets/fosforos/fosforos-${puntosNos}.png`}
+                    src={rutaImagenPuntosNos}
                     alt="fosforo anotador truco"
                   />
                 </div>
@@ -155,7 +162,7 @@ function App() {
                   {" "}
                   <img
                     className={`${puntosNos2 <= 5 ? "h-[60%]" : "h-full"}`}
-                    src={`./src/assets/fosforos/fosforos-${puntosNos2}.png`}
+                    src={rutaImagenPuntosNos2}
                     alt="fosforo anotador truco"
                   />
                 </div>
@@ -180,7 +187,7 @@ function App() {
                   {" "}
                   <img
                     className={`${puntosEllos <= 5 ? "h-[60%]" : "h-full"}`}
-                    src={`./src/assets/fosforos/fosforos-${puntosEllos}.png`}
+                    src={rutaImagenPuntosEllos}
                     alt="fosforo anotador truco"
                   />
                 </div>
@@ -197,7 +204,7 @@ function App() {
                   {" "}
                   <img
                     className={`${puntosEllos2 <= 5 ? "h-[60%]" : "h-full"}`}
-                    src={`./src/assets/fosforos/fosforos-${puntosEllos2}.png`}
+                    src={rutaImagenPuntosEllos2}
                     alt="fosforo anotador truco"
                   />
                 </div>
