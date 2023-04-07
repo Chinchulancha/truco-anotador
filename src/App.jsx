@@ -17,10 +17,10 @@ function App() {
 
   const [gameOver, setGameOver] = useState(false);
 
-  const rutaImagenPuntosNos = `./src/assets/fosforos/fosforos-${puntosNos}.png`;
-  const rutaImagenPuntosNos2 = `./src/assets/fosforos/fosforos-${puntosNos2}.png`;
-  const rutaImagenPuntosEllos = `./src/assets/fosforos/fosforos-${puntosEllos}.png`;
-  const rutaImagenPuntosEllos2 = `./src/assets/fosforos/fosforos-${puntosEllos2}.png`;
+  const rutaImagenPuntosNos = `./assets/fosforos/fosforos-${puntosNos}.png`;
+  const rutaImagenPuntosNos2 = `./assets/fosforos/fosforos-${puntosNos2}.png`;
+  const rutaImagenPuntosEllos = `./assets/fosforos/fosforos-${puntosEllos}.png`;
+  const rutaImagenPuntosEllos2 = `./assets/fosforos/fosforos-${puntosEllos2}.png`;
 
   useEffect(() => {
     if (puntosEllos2 === 15 || puntosNos2 === 15) {
