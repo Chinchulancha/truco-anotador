@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import NosClick from "./components/NosClick";
 import EllosClick from "./components/EllosClick";
 
+
+
 import Swal from "sweetalert2";
 
 
@@ -16,6 +18,7 @@ function App() {
   const [puntosEllos2, setPuntosEllos2] = useState(0);
 
   const [gameOver, setGameOver] = useState(false);
+
 
   const rutaImagenPuntosNos = `./assets/fosforos/fosforos-${puntosNos}.png`;
   const rutaImagenPuntosNos2 = `./assets/fosforos/fosforos-${puntosNos2}.png`;
