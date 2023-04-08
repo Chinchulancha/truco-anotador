@@ -10,12 +10,12 @@ import Swal from "sweetalert2";
 
 
 function App() {
-  const [puntosNos, setPuntosNos] = useState(0);
-  const [puntosNos2, setPuntosNos2] = useState(0);
+  const [puntosNos, setPuntosNos] = useState(Number(localStorage.getItem('puntosNos')) ?? 0);
+  const [puntosNos2, setPuntosNos2] = useState(Number(localStorage.getItem('puntosNos2')) ?? 0);
   
 
-  const [puntosEllos, setPuntosEllos] = useState(0);
-  const [puntosEllos2, setPuntosEllos2] = useState(0);
+  const [puntosEllos, setPuntosEllos] = useState(Number(localStorage.getItem('puntosEllos')) ?? 0);
+  const [puntosEllos2, setPuntosEllos2] = useState(Number(localStorage.getItem('puntosEllos2')) ?? 0);
 
   const [gameOver, setGameOver] = useState(false);
 
@@ -24,6 +24,22 @@ function App() {
   const rutaImagenPuntosNos2 = `/assets/fosforos-${puntosNos2}.png`;
   const rutaImagenPuntosEllos = `/assets/fosforos-${puntosEllos}.png`;
   const rutaImagenPuntosEllos2 = `/assets/fosforos-${puntosEllos2}.png`;
+
+  useEffect(() => {
+    localStorage.setItem('puntosNos', puntosNos.toString() ?? 0)
+  }, [puntosNos])
+
+  useEffect(() => {
+    localStorage.setItem('puntosNos2', puntosNos2.toString() ?? 0)
+  }, [puntosNos2])
+
+  useEffect(() => {
+    localStorage.setItem('puntosEllos', puntosEllos.toString() ?? 0)
+  }, [puntosEllos])
+
+  useEffect(() => {
+    localStorage.setItem('puntosEllos2', puntosEllos2.toString() ?? 0)
+  }, [puntosEllos2])
 
   useEffect(() => {
     if (puntosEllos2 === 15 || puntosNos2 === 15) {
